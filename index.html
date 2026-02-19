@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Taha Khan Portfolio</title>
+
+   <style>
+.rocket-container {
+    position: relative;
+    height: 80px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.rocket {
+    position: absolute;
+    height: 70px;   /* adjust size */
+    animation: flyRocket 15s linear infinite;
+}
+
+@keyframes flyRocket {
+    0% {
+        left: -150px;
+        transform: rotate(90deg);
+
+    }
+    100% {
+        left: 100%;
+        transform: rotate(90deg);
+
+    }
+}
+
+
+.bubbles::before,
+.bubbles::after {
+    content: "";
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,200,255,0.4), transparent 70%);
+    border-radius: 50%;
+    animation: float 12s infinite alternate ease-in-out;
+}
+
+.bubbles::before {
+    top: 20%;
+    left: 10%;
+}
+
+.bubbles::after {
+    bottom: 15%;
+    right: 15%;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-40px); }
+}
+
+#introduction .card:hover {
+    transform: scale(1.03);
+    transition: 0.4s ease;
+}
+#introduction h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 42px;
+    color: #ffb6d9;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(255, 182, 217, 0.6);
+}
+
+
+/* ✨ Soft pastel overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        rgba(255, 200, 255, 0.15),
+        rgba(200, 220, 255, 0.15)
+    );
+    z-index: -1;
+}
+
+/* 🌸 introduction Section */
+#introduction {
+    padding: 90px 50px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* 🌷 Glass pastel card */
+#introduction .card {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px);
+    border-radius: 30px;
+    padding: 45px;
+    max-width: 900px;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 40px rgba(255, 200, 255, 0.2);
+    transition: 0.4s ease;
+}
+
+/* 🌸 Card hover glow */
+#introduction .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 60px rgba(255, 200, 255, 0.4);
+}
+
+/* ✨ Funky Italic Paragraph */
+#introduction p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 26px;
+    line-height: 2;
+    font-style: italic;
+    color: #fff0ff;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px rgba(255, 200, 255, 0.6);
+}
+
+/* 🌠 Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌈 Shimmer Animation */
+@keyframes shimmer {
+    0% { background-position: 0%; }
+    100% { background-position: 300%; }
+}
+/* 🌸 about Section */
+#about {
+    padding: 90px 50px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* 🎀 Same Heading Style */
+#about h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #ffb6d9;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(255, 182, 217, 0.6);
+}
+
+/* 🌷 Same Glass Card */
+#about .card {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(18px);
+    border-radius: 30px;
+    padding: 45px;
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 40px rgba(255, 200, 255, 0.2);
+    transition: 0.4s ease;
+}
+
+#about .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 60px rgba(255, 200, 255, 0.4);
+}
+
+/* ✨ Same Funky Italic Paragraph */
+#about p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    font-style: italic;
+    color: #fff0ff;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px rgba(255, 200, 255, 0.6);
+}
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url("anime-bg.png");
+            background-size: cover;
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Dark overlay for readability */
+        body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        rgba(40, 0, 60, 0.3),
+        rgba(0, 0, 40, 0.3)
+    );
+    z-index: -1;
+}
+/* 🌷 Certification Container */
+.cert-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ✨ Certification Cards */
+.cert-card {
+    padding: 15px 25px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-family: 'Quicksand', sans-serif;
+    font-style: italic;
+    color: #fff0ff;
+    box-shadow: 0 0 20px rgba(255, 200, 255, 0.3);
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.cert-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(255, 200, 255, 0.5);
+}
+
+/* Ongoing Highlight */
+.cert-card.ongoing {
+    border: 2px solid #ffd6f6;
+    background: rgba(255, 220, 255, 0.25);
+}
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+        }
+
+        nav h1 {
+            font-size: 28px;
+            color: #ff7bd5;
+            text-shadow: 0 0 10px #ff7bd5;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00f7ff;
+            text-shadow: 0 0 8px #00f7ff;
+        }
+
+        section {
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        .hero {
+            padding: 120px 50px 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h2 {
+            font-size: 50px;
+            color: #ffffff;
+            text-shadow: 0 0 20px #ff7bd5;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-top: 15px;
+            color: #ddd;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #ff7bd5, #00f7ff);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #00f7ff;
+        }
+
+        .card {
+            margin: 30px auto;
+            width: 60%;
+            padding: 25px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 35px;
+            color: #ff7bd5;
+            text-shadow: 0 0 15px #ff7bd5;
+        }
+
+        #contact button {
+            margin: 10px;
+        }
+
+        @media(max-width: 768px){
+            .card {
+                width: 90%;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 35px;
+            }
+        }
+.email-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff7bd5, #00f7ff);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.email-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00f7ff;
+}
+.insta-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.insta-btn i {
+    margin-right: 8px;
+}
+
+.insta-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #d62976;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1>TAHA KHAN</h1>
+        <ul>
+            <li><a href="#about">about Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+<div class="bubbles"></div>
+
+
+    <section class="hero">
+        <h2>Hello, I'm TAHA👋🚀</h2>
+
+        <p>Graphic Developer,AI Enthusiast and Ms Office</p>
+<div class="rocket-container">
+        <img src="rocket.gif" alt="rocket" class="rocket">
+    </div>
+
+
+    </section>
+<section id="introduction">
+        <h2>Introduction</h2>
+        <div class="card">
+            <p>
+                
+Myself Taha,I am a passionate AI enthusiast driven by curiosity and creativity. 
+With a strong interest in artificial intelligence and emerging technologies, 
+I love transforming ideas into impactful digital experiences.
+
+Beyond AI, I specialize in graphic design, eye-catching thumbnails, 
+creative advertisement photoshoots, professional MS Office solutions, 
+and designing unique, standout resumes. 
+
+I enjoy blending technology with creativity to deliver work that is 
+not just functional — but visually powerful and memorable.
+            </p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>
+Me with a background in B.Sc. Biology and a growing passion for technology and innovation. 
+After completing my graduation, I expanded my skill set by completing CCC and Tally, and I am currently pursuing O Level to strengthen my technical foundation.
+
+As an AI enthusiast and creative thinker, I enjoy working on graphic designs, thumbnails, advertisement photoshoots, MS Office projects, and crafting unique, standout resumes. 
+
+I believe in continuous learning, innovation, and exploring the ever-evolving world of technology and creativity. My goal is to merge knowledge with imagination to create impactful and meaningful digital experiences.
+</p>
+
+        </div>
+    </section>
+
+    <section id="education">
+    <h2>EDUCATION & CERTIFICATIONS</h2>
+
+    <div class="edu-container">
+
+        <div class="edu-card">
+            <h3>High School</h3>
+            <p>Completed with <strong>84.16%</strong></p>
+        </div>
+
+        <div class="edu-card">
+            <h3>Intermediate</h3>
+            <p>Completed with <strong>79%</strong></p>
+        </div>
+
+        <div class="edu-card highlight">
+            <h3>B.Sc. Graduation</h3>
+            <p>Secured <strong>Highest Marks in College</strong><br>
+            Under <strong>Lucknow University</strong></p>
+        </div>
+
+    </div>
+
+    <div class="cert-container">
+
+        <div class="cert-card">CCC (Course on Computer Concepts)</div>
+        <div class="cert-card">Tally Certification</div>
+        <div class="cert-card">ADSE</div>
+        <div class="cert-card">MDCA</div>
+        <div class="cert-card ongoing">Pursuing O Level</div>
+
+    </div>
+
+</section>
+
+
+    <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="card">
+        <h3>MS Office Training</h3>
+        <p><strong>CLFM Academy</strong></p>
+        <p>
+            Completed professional training in MS Office with hands-on practice in 
+            Microsoft Word, Excel, and PowerPoint. Developed strong skills in 
+            documentation, data handling, presentations, and office productivity solutions.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Freelance Creative Work</h3>
+        <p>
+            Worked independently on various freelance projects including:
+        </p>
+        <ul style="list-style: none; padding-top: 10px;">
+            <li>✨ Designing eye-catching YouTube thumbnails</li>
+            <li>📊 Creating professional Excel sheets and data reports</li>
+            <li>🎨 Designing advertisement pamphlets and promotional materials</li>
+        </ul>
+        <p style="margin-top:15px;">
+            Focused on delivering creative, professional, and visually impactful work 
+            tailored to client requirements.
+        </p>
+    </div>
+
+</section>
+
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <a href="https://mail.google.com/mail/?view=cm&to=tahaunfolds@gmail.com" target="_blank" class="email-btn">
+    Send Email
+<br>
+<a href="https://instagram.com/roaring_tacaz" target="_blank" class="insta-btn">
+    <i class="fab fa-instagram"></i> Instagram
+</a>
+
+</a>
+
+    </section>
+
+</body>
+</html>
